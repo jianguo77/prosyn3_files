@@ -2,8 +2,9 @@
 #user = str(user)
 
 import numpy as np
-from tensorflow.keras.preprocessing import image
-from tensorflow.keras.models import model_from_json
+
+from keras.preprocessing import image
+from keras.models import model_from_json
 import time
 
 #load model
@@ -53,12 +54,12 @@ class VideoCamera(object):
             #u.append(str(user))
             
             label = emotions[np.argmax(predictions)]  # Get label with most probability
-            confidence = np.max(predictions)
+            confidence = np.max(predictions).round(decimals = 2) 
             confidence *= 100 # Multiple probability by 100
             detect = dict()
             detect['label'] = label
             detect['score'] = str(max_index).split(".")[0]
-            cv2.putText(test_img, " User" +" is " + predicted_emotion +":" +str(confidence), (int(x), int(y)), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
+            cv2.putText(test_img, " User" +" is " + predicted_emotion +":" +str(confidence)+'%', (int(x), int(y)), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
            
 
                       

@@ -1,5 +1,6 @@
 from flask import Flask, render_template, Response
 import cam
+
 app = Flask(__name__)
 
 @app.route('/')
