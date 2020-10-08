@@ -1,0 +1,29 @@
+ <!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <title>Flask Parent Template</title>
+   <link rel="stylesheet" href="{{ url_for('static',     filename='css/template.css') }}">
+ </head>
+ <body>
+    <header>
+     <div class="start-stop">
+        <h1 class="logo">Real Time Predicting of Emotions by ProSyn3</h1>
+        <strong><nav>
+          <ul class="menu">
+            <li><a href="{{ url_for('index') }}">Start the Camera</a></li>
+            <li><a href="{{ url_for('about') }}">Stop the Camera</a></li>
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+    
+    {% block content %}
+    {% endblock %}
+    
+ </body>
+       <form action="https://www.bdeb.qc.ca/le-college/nous-joindre/">
+    <input type="submit" value="For more info" />
+</form>
+</html>
+

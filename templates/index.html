@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Facial Expression Recognition</title>
+  </head>
+     <body>
+      {% extends "template.html" %}
+    {% block content %}
+    </body>
+  <body>
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+</head>
+    <img id="bg" width=800px height=648px src="{{ url_for('video_feed') }}">
+    {% endblock %}
+  </body>
+

@@ -1,0 +1,5 @@
+numpy==1.16.0
+Keras==2.4.3
+Flask
+tensorflow
+glog
