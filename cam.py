@@ -7,7 +7,7 @@ from keras.preprocessing import image
 from keras.models import model_from_json
 import time
 import tensorflow as tf
-
+#GG
 #load model
 model = model_from_json(open("Model_Weights/fer238.json", "r").read(), custom_objects={'softmax_v2': tf.nn.softmax})
 #load weights
