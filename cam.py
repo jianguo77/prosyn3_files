@@ -21,7 +21,7 @@ face_haar_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 class VideoCamera(object):
 
     def __init__(self):
-        #self.video=cv2.VideoCapture('C:\\Users\\Nisha Haulkhory\\projet de synthese\\FER\\Video\\presidential_debate.mp4')
+        #self.video=cv2.VideoCapture('Video/Debate.mp4')
         self.video=cv2.VideoCapture(0)
         time.sleep(5.0)
 
